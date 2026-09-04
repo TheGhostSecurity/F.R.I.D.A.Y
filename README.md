@@ -2,6 +2,8 @@
 
 The FastAPI gateway is the filesystem trust boundary. The model has no filesystem access: the agent sends its proposed tool calls to the gateway's HTTP API, and concrete tools execute only through `Gateway.execute()` and its `check_permission(action, resource)` call.
 
+For daily setup and command usage, see [USER_MANUAL.md](USER_MANUAL.md).
+
 ## Permission configuration
 
 `config/permissions.yaml` defines the only filesystem roots the gateway can address and the decision for each action. Valid decisions are `allow`, `ask`, and `deny`.

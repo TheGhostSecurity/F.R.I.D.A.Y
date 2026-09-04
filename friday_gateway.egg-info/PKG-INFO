@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: friday-gateway
+Version: 0.1.0
+Summary: Permission-enforcing gateway for the F.R.I.D.A.Y. local agent
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: uvicorn[standard]>=0.30
+Provides-Extra: dev
+Requires-Dist: httpx>=0.28; extra == "dev"
+Requires-Dist: pytest>=8.0; extra == "dev"

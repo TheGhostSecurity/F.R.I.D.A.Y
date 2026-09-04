@@ -1,0 +1,11 @@
+# The gateway expands ~, then resolves symlinks and .. before it authorizes a path.
+# A path must remain inside one of these resolved roots.
+filesystem:
+  allowed_roots:
+    - ~/Projects
+    - ~/Documents
+  permissions:
+    read: allow
+    create: allow
+    modify: ask
+    delete: ask

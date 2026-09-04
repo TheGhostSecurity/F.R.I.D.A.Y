@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "friday-gateway"
+version = "0.1.0"
+description = "Permission-enforcing gateway for the F.R.I.D.A.Y. local agent"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "pyyaml>=6.0", "uvicorn[standard]>=0.30"]
+
+[project.optional-dependencies]
+dev = ["httpx>=0.28", "pytest>=8.0"]
+
+[project.scripts]
+friday = "friday_gateway.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["friday_gateway*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,2 @@
+[console_scripts]
+friday = friday_gateway.cli:main
